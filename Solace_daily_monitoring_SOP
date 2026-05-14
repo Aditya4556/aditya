@@ -1,0 +1,18 @@
+SOLACE DAILY MONITORING: --->>>>
+
+IBL_EDPDELTA ----IBL_EDPDELTA ----Queues | #MSGVPN_REPLICATION_DATA_QUEUE 
+
+
+IBL_Fiserv_CCDWH ----Queues | Q.ccdwh.authorizations - finserve vpnore
+                 ----Queues | Q.ccdwh.payments.authorizations
+
+
+IBL_SMSAPI ----Queues | Q.SMSAPI04.sendsms
+
+
+IBL_ORMB ----Queues | Q.ORMB.ACCOUNTS  --check message cumsumtion and current time
+              Queues | Q.ORMB.CUSTOMER 
+
+IBL_OGG----ogg---check current time
+IBL_OGG----SMS---Queues | DMQ.SMS.CUSTOM.C_TRAN_ALERT_TBL ---all time message and cunsumtion will be 0
+IBL_OGG----Queues | Q.SMS.CUSTOM.C_TRAN_ALERT_TBL
