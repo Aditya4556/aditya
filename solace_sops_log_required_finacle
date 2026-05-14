@@ -1,0 +1,22 @@
+Logs Required - Finacle
+
+Can you please provide the Finacle event log for the below CIF id’s
+
+1. Login to Server:
+Server IP - 10.24.62.14
+2.Switch User:
+sudo su - gguser
+3.Verify Java Process
+ps -ef|grep java
+4.Change directory to the MI‑Connector path:
+PATH:
+cd /ggsoft/mi-connector/operator1
+5.Use grep to extract logs related to each CIF ID from nohup.out.
+grep -i "<CIF_ID>" nohup.out > <CIF_ID>.txt
+ex: grep -i "82136097" nohup.out > 82136097.txt
+6.Repeat the above step for all required CIF IDs.
+7. Verify Log Content
+vi CIF_ID
+8.Set required permissions for the extracted log files:
+chmod 755 82136097.txt
+9.Copy Files to Local System via SFTP
