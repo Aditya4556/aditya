@@ -1,0 +1,82 @@
+Weblogic server start stop process
+========================================
+Weblogic start process
+======================
+
+
+1] sudo su - oracle
+2] to start Weblogic in 10.82.156.177
+
+
+cd /u01/app/oracle/middleware/user_projects/domains/ORMB/bin
+
+nohup ./startWebLogic.sh &
+
+3] To start Node manager in 10.82.156.177
+
+cd /u01/app/oracle/middleware/user_projects/domains/ORMB/bin
+
+nohup ./startNodeManager.sh &
+
+4] To start Node manager in 10.82.156.190
+
+cd /u01/app/oracle/middleware/user_projects/domains/ORMB/bin
+
+nohup ./startNodeManager.sh &
+
+5] To start Manage server: 
+
+login to console : http://10.82.156.177:7001/console
+username : weblogic
+password: admin@321
+
+a]First check machine is reachable or not?
+
+login to console : Domain Structure → Environment → Machine -> click on monitoring -> click on NodeManager -> check the status reachable or not ?
+
+b]To start Manage server:
+
+Domain Structure → Environment → Servers 
+
+-Click on the Control tab (top)
+-Select the checkbox next to the Managed Server you want to start
+-Click Start → choose Servicing all requests
+-Click Yes to confirm
+
+Weblogic stop process
+======================
+10.82.156.177
+
+1] Stop Manage server from console.
+
+Domain Structure → Environment → Servers 
+
+Click on the Control tab (top)
+Select the checkbox next to the Managed Server you want to shop
+Click Shutdown → choose Force shutdown now
+Click Yes to confirm
+
+2] stop Node manager from server end:
+10.82.156.177
+
+cd /u01/app/oracle/middleware/user_projects/domains/ORMB/bin
+
+./stopNodeManager.sh
+
+3] stop WEblogic from server end:
+
+./stopWebLogic.sh
+
+4] stop Node manager from server end:
+
+10.82.156.190
+cd /u01/app/oracle/middleware/user_projects/domains/ORMB/bin
+
+./stopNodeManager.sh
+
+
+ps -ef | grep java  - check any process running or not? 
+
+
+weblogic / admin@321
+==================================================================
