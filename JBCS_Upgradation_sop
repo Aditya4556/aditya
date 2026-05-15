@@ -1,0 +1,9 @@
+JBCS upgradation
+
+1] Stop services first and take tar backup of mentioned services.
+2] rename old one and unzip new binary 
+3] apply latest patch on new unziped binary
+4] if rhel is above 8 version ex : 9, 10 on path /jbcs-httpd24-2.4/httpd/sbin copy old apachectl to path and afetr latest patch appiled copy to new jbcs sbin path 
+5] mv www, conf ,conf.d, and SSl then copy old wwe, conf and SSL to new one 
+6] then start httpd process
+7] check latest version and errors
